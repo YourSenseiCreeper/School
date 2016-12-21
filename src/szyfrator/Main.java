@@ -8,13 +8,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		// Ma klucz przestawienia do ka¿dej litery
-		// KONIEC
-		
-		//K L A S A
-		//K = 10, L = 3, A = 7, S = 9
-		//10 3 7 9 7
-		
 		// GENERATOR
 		String let = "abcdefghijklmnoprstuwqxyz";
 		Random r = new Random();
@@ -40,6 +33,8 @@ public class Main {
 		
 		msg("Podaj wyraz do zaszyfrowania: ");
 		
+		// Deszyfrowanie
+	
 		String word = sc.nextLine().toLowerCase();
 		String[] spacje = word.split(" ");
 		StringBuilder bud = new StringBuilder();
