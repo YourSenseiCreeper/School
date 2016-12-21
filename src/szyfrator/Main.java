@@ -1,4 +1,4 @@
-package day_5;
+package szyfrator;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -40,7 +40,7 @@ public class Main {
 		
 		msg("Podaj wyraz do zaszyfrowania: ");
 		
-		String word = sc.next().toLowerCase();
+		String word = sc.nextLine().toLowerCase();
 		String[] spacje = word.split(" ");
 		StringBuilder bud = new StringBuilder();
 		
@@ -53,26 +53,24 @@ public class Main {
 			}
 			bud.append("1 ");
 		}
-		
-		
-		
+
 		msg("Zaszyfrowany wyraz: "+bud.toString());
+		msg("Deszyfrator (oddzielaj spacjami kolejne znaki!)");
 		
-		//bud.delete(0, bud.length());
-		
-		
-		msg("Deszyfrator (oddzielaj spacjami kolejne znaki!) ");			// Problemy przy deszyfrowaniu
-		String[] chars = sc.next().split(" ");	
-		for(String s : chars){
-			msg(s);
-		}
-		bud = new StringBuilder();
+		word = sc.nextLine();		
+		spacje = word.split(" ");
+		StringBuilder bud2 = new StringBuilder();
 		int bufor = 0;
-		for(String c : chars){
-			bufor = Integer.parseInt(c);
-			if(dehash.containsKey(c))
+		
+		for(String c : spacje){
+			bufor = Integer.valueOf(c);
+			if(bufor == 1){
+				bud2.append(" ");
+				continue;
+			}
+			if(hash.containsValue(bufor))
 			{
-				bud.append(dehash.get(bufor)+"");
+				bud2.append(dehash.get(bufor)+"");
 			}
 			else
 			{
@@ -80,7 +78,7 @@ public class Main {
 				break;
 			}
 		}
-		msg("Zakodowana wiadomoœæ: "+bud.toString());
+		msg("Zakodowana wiadomoœæ: "+bud2.toString());
 	}
 	
 	static void msg(String msg){
