@@ -33,7 +33,7 @@ public class Main {
 		
 		msg("Podaj wyraz do zaszyfrowania: ");
 		
-		// Deszyfrowanie
+		// DESZYFROWANIE
 	
 		String word = sc.nextLine().toLowerCase();
 		String[] spacje = word.split(" ");
