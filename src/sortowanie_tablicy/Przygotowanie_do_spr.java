@@ -120,3 +120,21 @@ public class Przygotowanie_do_spr {
 	}
 
 }
+
+class Auto
+{
+	private String nr;
+	
+	public Auto(String nr){
+		this.nr = nr;
+	}
+	
+}
+
+class Audi extends Auto{
+
+	public Audi(String nr) {
+		super(nr);
+	}
+	
+}
