@@ -130,11 +130,3 @@ class Auto
 	}
 	
 }
-
-class Audi extends Auto{
-
-	public Audi(String nr) {
-		super(nr);
-	}
-	
-}
