@@ -1,6 +1,5 @@
 package spr_tablice;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
@@ -8,9 +7,6 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Random r = new Random();
-		
-		
-		
 		char[] tab = {'I', 'N', 'F', 'O', 'R', 'M', 'A', 'T', 'Y', 'K', 'A'};  
 		
 		StringBuilder b = new StringBuilder();
