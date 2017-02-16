@@ -1,0 +1,2 @@
+Min - Index: 11 - 3
+Max - Index: 11 - 26
