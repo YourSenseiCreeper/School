@@ -21,6 +21,7 @@ public class Main {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		sc.close();
 		
 		System.out.println("Podaj jakiœ tekst:\n");
 		System.out.println(f.getAbsolutePath());

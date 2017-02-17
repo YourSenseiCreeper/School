@@ -43,6 +43,7 @@ public class Main_2 {
 			cyfry[i] = Integer.parseInt(buf);
 			sumy[i] = suma;
 		}
+		
 		sc.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
