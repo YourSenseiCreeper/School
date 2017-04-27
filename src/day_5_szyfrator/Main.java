@@ -1,4 +1,4 @@
-package szyfrator;
+package day_5_szyfrator;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -32,6 +32,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		msg("Podaj wyraz do zaszyfrowania: ");
+		sc.hasNext();
 		
 		// DESZYFROWANIE
 	
