@@ -1,12 +1,18 @@
 package bunt_po_builderze;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Desktop;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 import javax.imageio.ImageIO;
@@ -15,6 +21,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 public class ProgramFrame extends JFrame{
 
@@ -61,8 +68,34 @@ public class ProgramFrame extends JFrame{
 		panel1.setLayout(new GridLayout(4,1));
 		panel1.add(btn1);
 		panel1.add(btn3);
+	
+		try {	
+		URI uri = new URI("https://github.com/YourSenseiCreeper/School/tree/master/src/bunt_po_builderze");
+	    class OpenUrlAction implements ActionListener {
+	      @Override public void actionPerformed(ActionEvent e) {
+	        open(uri);
+	      }
+	    }
+		
+	    JButton button = new JButton();
+	    button.setText("Source code programu");
+	    button.setBackground(Color.lightGray);
+	    button.setToolTipText(uri.toString());
+	    button.addActionListener(new OpenUrlAction());
+		panel1.add(button);
+		} catch (URISyntaxException e1) {
+			e1.printStackTrace();
+		}
 		panel1.add(btn4);
 		add(panel1, BorderLayout.NORTH);
+	}
+	
+	private static void open(URI uri) {
+		if (Desktop.isDesktopSupported()) {
+			try {
+				Desktop.getDesktop().browse(uri);
+			} catch (IOException e) {}
+		}
 	}
 	
 	public void center(JFrame f){
